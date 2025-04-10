@@ -79,8 +79,6 @@ Ou clonar com Git:
 git clone https://github.com/Matheus538Benjamin/playground-python-data/blob/main/obter_dados_api.ipynb
 cd pokedex
 
-## 👩‍💻 Quem fez
-
 Esse projeto foi criado por Matheus Benjamin Aquino Silva. 
 
 - GitHub: [github.com/seu-usuario](https://github.com/Matheus538Benjamin)
