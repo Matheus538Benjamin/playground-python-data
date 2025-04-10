@@ -3,7 +3,7 @@
 Seja bem-vindo(a) à sua primeira mini Pokédex!  
 Aqui, vamos montar um projeto simples em Python que **busca dados reais da internet** sobre três Pokémons famosos: **Charmander**, **Charmeleon** e **Charizard**. Depois, salvamos essas informações em uma tabela organizada, guardamos num banco de dados e até criamos alertas automáticos. 💾⚠️
 
-Ideal para quem está começando com Python e quer aprender a usar:
+Ferremantes utilizadas
 - APIs (pra buscar dados da internet)
 - Pandas (pra criar tabelas e tratar dados)
 - SQLite (pra salvar tudo num mini banco)
@@ -79,4 +79,8 @@ Ou clonar com Git:
 git clone https://github.com/Matheus538Benjamin/playground-python-data/blob/main/obter_dados_api.ipynb
 cd pokedex
 
+## 👩‍💻 Quem fez
 
+Esse projeto foi criado por Matheus Benjamin Aquino Silva. 
+
+- GitHub: [github.com/seu-usuario](https://github.com/Matheus538Benjamin)
