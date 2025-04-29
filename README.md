@@ -13,49 +13,41 @@ Aqui, vamos montar um projeto simples em Python que **busca dados reais da inter
 
 # 📘 Descrição do Notebook
 
-Este notebook realiza a **extração, tratamento, armazenamento e validação de dados** da **Pokémon API**, com foco nos Pokémons **Charmander**, **Charmeleon** e **Charizard**.
+Este notebook realiza a **extração, tratamento, armazenamento e validação de dados** da **Pokémon API**, com foco nos Pokémons **Charmander**, **Charmeleon** e **Charizard**.  
+Agora também integra as **habilidades** de cada Pokémon e usa um sistema de alerta avançado, inspirado no modelo da Aula 20.
 
 As principais etapas do processo são:
 
-## 🔹 1. Extração de Dados
-- Acesso à PokéAPI com a biblioteca `requests`;
-- Coleta dos dados de cada Pokémon por suas URLs específicas.
+## 🔹 Primeiro passo: Mensagem de Alerta
+- Implementação da função `alerta()` para exibir mensagens personalizadas em caso de erro ou eventos específicos.
 
-## 🔹 2. Verificação de Respostas
-- Checagem do `status_code` da resposta da API;
-- Mensagens de erro personalizadas em caso de falha na requisição.
+## 🔹 Etapa 1: Extração dos Dados
+- Acesso à PokéAPI usando a biblioteca `requests`;
+- Coleta dos dados básicos dos Pokémons: Nome, Experiência Base, Altura, Peso e ID.
 
-## 🔹 3. Criação de Tabelas Individuais (DataFrames)
-Para cada Pokémon, são organizadas informações como:
-- **Nome**
-- **Experiência Base**
-- **Altura**
-- **Peso**
-- **ID**
+## 🔹 Etapa 2: Coleta e Organização
+- Coleta adicional das **habilidades** de cada Pokémon;
+- Organização dos dados principais + habilidades em um `DataFrame`.
 
-## 🔹 4. Unificação e Tratamento de Dados
-- Junção dos DataFrames em uma única tabela;
-- Padronização dos nomes das colunas com `str.title()`;
-- Preenchimento de valores ausentes com `fillna(0)`;
-- Conversão de tipos para `float`, quando necessário;
-- Padronização dos nomes dos Pokémons com `str.title()`.
+## 🔹 Etapa 3: Tratamento dos Dados
+- Padronização dos nomes das colunas usando `str.title()`;
+- Preenchimento de valores nulos com `fillna(0)`;
+- Conversão dos tipos (`Altura` e `Peso`) para `float`;
+- Ajuste de texto para deixar os nomes dos Pokémons formatados.
 
-## 🔹 5. Visualização Final
-- Exibição da tabela final tratada com `display()` para facilitar a leitura.
+## 🔹 Etapa 4: Armazenamento no SQLite
+- Criação de um banco local `pokemons_v4.db` com `sqlite3`;
+- Salvamento dos dados tratados na tabela `tabela_pokemons`.
 
-## 🔹 6. Armazenamento em Banco de Dados
-- Criação de um banco local `pokemons.db` com `sqlite3`;
-- Armazenamento da tabela no banco com o nome `tabela_pokemons`.
+## 🔹 Etapa 5: Validação
+- Leitura dos dados salvos no banco;
+- Exibição do conteúdo da tabela para conferir se os dados foram armazenados corretamente.
 
-## 🔹 7. Validação dos Dados
-- Leitura direta do banco para conferir os dados salvos;
-- Exibição da tabela recuperada com `display()`.
+## 🔹 Etapa 6: Sistema de Alerta
+- Verificação automática de Pokémons com **experiência base acima de 200**;
+- Emissão de alertas formatados informando nome e experiência do Pokémon.
 
-## 🔹 8. Sistema de Alerta
-- Checagem automática de Pokémons com **experiência base acima de 200**;
-- Geração de alertas com `print()` para destaque.
-
-> 💡 Este notebook é um ótimo exemplo de como integrar APIs, tratar dados com `pandas` e salvar os resultados com `sqlite3`.
+> 💡 Este notebook é um ótimo exemplo de como integrar APIs, tratar dados com `pandas`, salvar resultados com `sqlite3` e automatizar alertas de validação.
 
 ---
 
